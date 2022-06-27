@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc {
+  height: 640px;
+  width: 360px;
+  background-color: black;
+}
+
+.calc__screen {
+  height: 30%;
+  max-height: 192px;
+  max-width: 360px;
+  background-color: black;
+  color: white;
+  position: relative;
+  top: 0;
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 300;
+  text-align: right;
+  padding: 95px 15px 0 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.calc__btns {
+  height: 70%;
+  position: relative;
+  bottom: 0;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "ac lp rp division"
+    "seven eight nine mult"
+    "four five six minus"
+    "one two three plus"
+    "zero zero comma equal";
+  grid-gap: 10px;
+}
+
+.calc__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 1.75rem;
+  border-radius: 50%;
+  cursor: default;
+  user-select: none;
+}
+
+.calc__btn:hover {
+  filter: brightness(120%);
+}
+
+.btn__special {
+  background-color: #b4b4b4;
+  color: black;
+}
+
+.btn__op {
+  background-color: #f1a33c;
+  color: #fef1da;
+}
+
+.btn__number {
+  background-color: #333;
+  color: #e1e1e1;
+}
+
+/* Positions */
+
+.btn__special--leftPar {
+  grid-area: lp;
+}
+
+.btn__special--ac {
+  grid-area: ac;
+}
+
+.btn__special--rightPar {
+  grid-area: rp;
+}
+
+.btn__op--division {
+  grid-area: division;
+}
+
+.btn__op--mult {
+  grid-area: mult;
+}
+
+.btn__op--minus {
+  grid-area: minus;
+}
+
+.btn__op--plus {
+  grid-area: plus;
+}
+
+.btn__op--equal {
+  grid-area: equal;
+}
+
+.btn__number--7 {
+  grid-area: seven;
+}
+
+.btn__number--8 {
+  grid-area: eight;
+}
+
+.btn__number--9 {
+  grid-area: nine;
+}
+
+.btn__number--4 {
+  grid-area: four;
+}
+
+.btn__number--5 {
+  grid-area: five;
+}
+
+.btn__number--6 {
+  grid-area: six;
+}
+
+.btn__number--1 {
+  grid-area: one;
+}
+
+.btn__number--2 {
+  grid-area: two;
+}
+
+.btn__number--3 {
+  grid-area: three;
+}
+
+.btn__number--decimal {
+  grid-area: comma;
+}
+
+.btn__number--0 {
+  grid-area: zero;
+  padding-left: 28px;
+  justify-content: flex-start;
+  border-radius: 55px;
+}
