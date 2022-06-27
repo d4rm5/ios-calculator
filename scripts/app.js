@@ -213,7 +213,7 @@ rpButton.onclick = () => {
 };
 
 decimalButton.onclick = () => {
-  if (lastValue === ".") {
+  if (lastValue === "." || value.innerHTML == result) {
     value.innerHTML = value.innerHTML;
     last();
   } else if (
